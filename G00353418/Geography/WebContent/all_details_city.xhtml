@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+  xmlns:f="http://xmlns.jcp.org/jsf/core">
+  
+  <h:head>
+     <title>Full City Details</title>
+  </h:head>
+  <h:body>	
+  	<h3><b>Full City Details</b></h3>  
+  	<h:form>
+		<h:column>
+	     <B>City Code: </B>    &#160;&#160;&#160;#{city.cty_code} <br/>
+	     <B>Country Code: </B> &#160;&#160;#{city.co_code} <br/>
+	     <B>Region Code: </B>  &#160;&#160;#{city.reg_code} <br/>
+	     <B>City Name:</B>     &#160;&#160;#{city.cty_name}<br/>
+	     <B>Population:</B>    &#160;&#160;#{city.population}<br/>
+	     <B>By The Sea:</B>    &#160;&#160;#{city.isCoastal}<br/>
+	     <B>Area(KM):</B>      &#160; &#160;&#160;#{city.areaKM}<br/>
+  		</h:column>
+	</h:form>
+	     <h:outputLink value="index.xhtml">Home</h:outputLink> &#160;&#160;
+	     <h:outputLink value="list_cities.xhtml">Cities</h:outputLink>
+  </h:body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+  xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <h:head>
+     <title>List Countries</title>
+     <STYLE type="text/css">
+		.dataTable {
+			border: 1px solid #FFFFFF;
+		}
+		.table-header {
+			color: #FFFFFF;
+			background-color:#0330F9;
+		}
+		.table-odd-row{
+			background-color:#909DDA;
+		}
+		.table-even-row{
+			background-color:#C4C9E1;
+		}
+	 </STYLE>
+  </h:head>
+  <f:metadata>
+	 <f:event type="preRenderView" listener="#{stateMongoController.loadMongo()}" />
+  </f:metadata>
+  <h:head>
+    <title>List Head of State</title>
+  </h:head>
+  <h:body>
+  	<h:form>
+     <h:commandButton value="Add Head of State" action="add_head_of_state.xhtml" />
+     <h:dataTable value = "#{stateMongoController.mongo}" var = "sm"
+     headClass = "table-header"
+     rowClasses = "table-odd-row,table-even-row">
+     <h:column>
+     <f:facet name="header">Country Code</f:facet>
+     #{sm._id}
+     </h:column>
+     <h:column>
+     <f:facet name="header">Head Of State</f:facet>
+     #{sm.headOfState}
+     </h:column>
+     <h:column>
+     	<f:facet name="header">Action</f:facet>
+	    <h:commandLink value="Delete" action="#{stateMongoController.deleteMongo(sm)}"/>
+     </h:column>
+     </h:dataTable>
+     <br></br>
+     <h:link value="Home" outcome="index.xhtml"/>
+   </h:form>
+  	
+  </h:body>
+</html>

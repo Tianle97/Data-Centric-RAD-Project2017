@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+  xmlns:f="http://xmlns.jcp.org/jsf/core">
+  
+  <h:head>
+     <title>Add Cities</title>
+  </h:head>
+  <h:body>	
+     <h:form>
+         <h:messages globalOnly="true" style="color: red" />	
+	     <h3><b>Add Cities</b></h3>  
+	     <br></br>
+	     Country Code: <h:inputText value="#{mongo._id}" id="co_code" required="true" requiredMessage="Country Code is mandatory"/>
+	     <h:message for="co_code" style="color: red" />
+	     <br />
+	     <br />
+	     Head of State: <h:inputText value="#{mongo.headOfState}" id="headofstate" required="true" requiredMessage="Head of State is mandatory"/>
+	     <h:message for="headofstate" style="color: red" />
+	     <br />
+	     <br />
+	     &#160;&#160;&#160;&#160;&#160;&#160;<h:commandButton value="Add" action="#{stateMongoController.addMongo(mongo)}"></h:commandButton>
+		 <br />
+		 <br />
+		 <br />
+	     <h:outputLink value="index.xhtml">Home</h:outputLink> &#160;&#160;
+	     <h:outputLink value="list_head_of_state.xhtml">Head Of State</h:outputLink>
+   </h:form>
+  </h:body>
+</html>

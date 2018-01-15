@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+  xmlns:f="http://xmlns.jcp.org/jsf/core">
+  
+  <h:head>
+     <title>List Countries</title>
+     <STYLE type="text/css">
+		.dataTable {
+			border: 1px solid #FFFFFF;
+		}
+		.table-header {
+			color: #FFFFFF;
+			background-color:#0330F9;
+		}
+		.table-odd-row{
+			background-color:#909DDA;
+		}
+		.table-even-row{
+			background-color:#C4C9E1;
+		}
+	 </STYLE>
+  </h:head>
+  <h:body>	  
+  	 <h:form>
+     <h:dataTable value = "#{cityController.cities}" var = "c"
+     headerClass = "table-header"
+     rowClasses = "table-odd-row,table-even-row">
+     <h:column>
+	     <f:facet name="header">City Code</f:facet>
+	     #{c.cty_code}
+     </h:column>
+     <h:column>
+	     <f:facet name="header">Country Code</f:facet>
+	     #{c.co_code}
+     </h:column>
+     <h:column>
+	     <f:facet name="header">Region Code</f:facet>
+	     #{c.reg_code}
+     </h:column>
+     <h:column>
+	     <f:facet name="header">City Name</f:facet>
+	     #{c.cty_name}
+     </h:column>
+     <h:column>
+	     <f:facet name="header">Population</f:facet>
+	     #{c.population}
+     </h:column>
+     <h:column>
+	     <f:facet name="header">By The Sea</f:facet>
+	     #{c.isCoastal}
+     </h:column>
+     <h:column>
+	     <f:facet name="header">Area</f:facet>
+	     #{c.areaKM}
+     </h:column>
+     </h:dataTable>
+     <br></br>
+     <h:link value="Home" outcome="index"/> 
+     &#160;&#160;
+     <h:link value="Search" outcome="find_city"/>
+   </h:form>
+  
+  	
+  </h:body>
+</html>
