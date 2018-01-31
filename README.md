@@ -22,10 +22,10 @@
 ## *How to run*
 * 1.open the cmder or git bush come in the java workspace
 
-+ 2. enter blow for download the project <br />
+* 2.enter blow for download the project <br />
     `git clone https://github.com/Tianle97/go-project.git`
 
-* 3. open eclipse - click: File -> Import -> General -> Existing Projects into Workspace -> Browser -> G00353418 -> ok -> finish 
+* 3.open eclipse - click: File -> Import -> General -> Existing Projects into Workspace -> Browser -> G00353418 -> ok -> finish 
 
-* 4. You will see `Geography` in your Package Exployer.
+* 4.You will see `Geography` in your Package Exployer.
 
