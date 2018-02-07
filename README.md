@@ -1,6 +1,6 @@
 # Data Centric RAD-Project2017
 
-####  Lectuerer: *Gerard*
+####  Lectuerer: *Gerard harrison*
 ####  Student:   *Tianle Shu* 
 ####  StudentID: *G00353418*
 
